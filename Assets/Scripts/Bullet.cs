@@ -15,6 +15,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb2 = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
@@ -27,7 +28,6 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     public void Launch(Vector2 direction, string targetTag, float speed, float damage)
     {
         this.direction = direction;
@@ -35,7 +35,6 @@ public class Bullet : MonoBehaviour
         this.damage = damage;
         this.targetTag = targetTag;
     }
-
     public float GetDamage()
     {
         return damage;
